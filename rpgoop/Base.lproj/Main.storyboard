@@ -44,7 +44,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWX-tQ-rSF">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWX-tQ-rSF" userLabel="chest">
                                 <rect key="frame" x="351" y="308" width="195" height="193"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="195" id="XNd-Oj-e0I"/>
@@ -52,7 +52,7 @@
                                 </constraints>
                                 <state key="normal" image="chest"/>
                                 <connections>
-                                    <action selector="onChestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0s-cc-Zdd"/>
+                                    <action selector="onChestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQg-14-qt4"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="MwD-ZE-utC">
@@ -81,7 +81,7 @@
                                     <constraint firstAttribute="height" constant="89" id="qRP-ih-ZRd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player attacked wild Kimara!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQL-MP-oLh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press the attack button to attack!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQL-MP-oLh" userLabel="print Lbl">
                                 <rect key="frame" x="69" y="48" width="460" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="460" id="PJ9-4P-YpZ"/>
@@ -98,6 +98,37 @@
                                     <constraint firstAttribute="height" constant="213" id="KZc-hX-FlS"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJz-h1-hci" userLabel="player HP">
+                                <rect key="frame" x="183" y="308" width="65" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="LRK-xA-XZ6"/>
+                                    <constraint firstAttribute="height" constant="33" id="hUa-00-cRl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.9821494999" green="1" blue="0.99611595509999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ni-9j-HYv" userLabel="enemy HP">
+                                <rect key="frame" x="474" y="308" width="65" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="3gN-0C-hdv"/>
+                                    <constraint firstAttribute="height" constant="33" id="VJh-fi-ZrN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.9821494999" green="1" blue="0.99611595509999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ey-Lz-LkT" userLabel="attack Btn">
+                                <rect key="frame" x="499" y="486" width="94" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="4e9-Bq-QRG"/>
+                                    <constraint firstAttribute="height" constant="106" id="DLf-f6-pqg"/>
+                                </constraints>
+                                <state key="normal" image="attack"/>
+                                <connections>
+                                    <action selector="attackTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibm-6g-rec"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enem1" translatesAutoresizingMaskIntoConstraints="NO" id="P4v-I9-Gq4" userLabel="Enemy Img">
                                 <rect key="frame" x="312" y="301" width="234" height="200"/>
                                 <constraints>
@@ -113,37 +144,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJz-h1-hci">
-                                <rect key="frame" x="183" y="308" width="65" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="LRK-xA-XZ6"/>
-                                    <constraint firstAttribute="height" constant="33" id="hUa-00-cRl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.9821494999" green="1" blue="0.99611595509999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ni-9j-HYv">
-                                <rect key="frame" x="474" y="308" width="65" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="3gN-0C-hdv"/>
-                                    <constraint firstAttribute="height" constant="33" id="VJh-fi-ZrN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.9821494999" green="1" blue="0.99611595509999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ey-Lz-LkT">
-                                <rect key="frame" x="499" y="486" width="94" height="106"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="94" id="4e9-Bq-QRG"/>
-                                    <constraint firstAttribute="height" constant="106" id="DLf-f6-pqg"/>
-                                </constraints>
-                                <state key="normal" image="attack"/>
-                                <connections>
-                                    <action selector="attackTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQa-25-nMw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -192,11 +192,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="chestBtn" destination="eWX-tQ-rSF" id="RXn-Df-faR"/>
-                        <outlet property="enemyHpLbl" destination="7Ni-9j-HYv" id="URs-z1-1Cv"/>
-                        <outlet property="enemyImg" destination="P4v-I9-Gq4" id="0KT-BT-z2q"/>
-                        <outlet property="playerHpLbl" destination="r6v-0N-dg4" id="HFd-BZ-5xH"/>
-                        <outlet property="printLbl" destination="C62-eh-WpS" id="DIZ-QZ-Bmq"/>
+                        <outlet property="chestBtn" destination="eWX-tQ-rSF" id="N3u-uw-sCL"/>
+                        <outlet property="enemyHpLbl" destination="7Ni-9j-HYv" id="alu-hJ-8Dc"/>
+                        <outlet property="enemyImg" destination="P4v-I9-Gq4" id="XBz-k8-ZEv"/>
+                        <outlet property="playerHpLbl" destination="fJz-h1-hci" id="JkB-sw-ikt"/>
+                        <outlet property="printLbl" destination="EQL-MP-oLh" id="tRj-n9-u5v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

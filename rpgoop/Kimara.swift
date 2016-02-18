@@ -23,7 +23,7 @@ class Kimara: Enemy {
     
     override func attemptAttack(attackPower: Int) -> Bool {
         if attackPwr >= IMMUNE_MAX {
-            return super.attemptAttack(attackPwr)
+            return super.attemptAttack(attackPower)
         }
         else {
             return false

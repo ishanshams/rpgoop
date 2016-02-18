@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var printLbl: UILabel!
-
+    
     @IBOutlet weak var enemyHpLbl: UILabel!
     
     @IBOutlet weak var playerHpLbl: UILabel!
@@ -49,9 +49,11 @@ class ViewController: UIViewController {
         chestBtn.hidden = true
         printLbl.text = chestMessage
         NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "generateRandomEnemy", userInfo: nil, repeats: false)
+
     }
     
     @IBAction func attackTapped(sender: AnyObject) {
+        
         if enemy.attemptAttack(player.attackPwr) {
             printLbl.text = "Attacked \(enemy.type) for \(player.attackPwr) HP"
             enemyHpLbl.text = "\(enemy.hp) HP"
@@ -71,6 +73,7 @@ class ViewController: UIViewController {
             printLbl.text = "Killed \(enemy.type)"
             enemyImg.hidden = true
         }
+
     }
 }
 

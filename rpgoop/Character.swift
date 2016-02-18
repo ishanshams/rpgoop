@@ -41,7 +41,7 @@ class Character {
     }
     
     func attemptAttack(attackPower: Int) -> Bool {
-        self._hp -= attackPwr
+        self._hp -= attackPower
         
         return true
     }
